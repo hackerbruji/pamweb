@@ -226,4 +226,93 @@ ul.clean li{margin:.25rem 0}
   background: #fff;
 }
 
+/* -------contacto ---------------*/
+:root{
+  /* asegúrate de tener estos colores definidos */
+  --primary:#3b36f2;         /* morado pamweb */
+  --secondary:#00c2cb;       /* turquesa pamweb */
+  --text:#1e293b;
+  --surface:#ffffff;
+  --surface-2:#f6f8fc;
+}
+
+/* Card */
+.contact-card{
+  background: var(--surface);
+  border: 1px solid #e8ecf3;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(20,20,43,.06);
+  overflow: hidden;
+}
+
+/* Cabecera con acento fino */
+.contact-head{
+  padding: 18px 20px 10px;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg,var(--primary),var(--secondary)) 1;
+}
+.contact-head h2{
+  margin:0 0 6px 0;
+  font: 700 20px/1.2 system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial;
+  color: var(--text);
+}
+.contact-claim{
+  margin:0 0 6px 0;
+  color:#475569;
+  font: 500 14px/1.5 system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial;
+}
+
+/* Layout interior */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+  padding: 8px 20px 20px;
+}
+.contact-info{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Botones con icono */
+.contact-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border-radius:14px;
+  background: var(--surface-2);
+  border:1px solid #e8ecf3;
+  text-decoration:none;
+  color: var(--text);
+  font: 600 15px/1 system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.contact-btn svg{
+  width:20px; height:20px; fill: var(--primary);
+}
+.contact-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(90,0,141,.25);
+  box-shadow: 0 10px 22px rgba(20,20,43,.08);
+}
+
+/* Lateral de highlights */
+.contact-aside{
+  align-self: center;
+}
+.contact-highlights{
+  margin:0; padding:0 0 0 18px;
+  color:#52607a;
+  font: 500 14px/1.6 system-ui, -apple-system, "Inter", Segoe UI, Roboto, Arial;
+}
+.contact-highlights li{ margin: 4px 0; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-aside{ padding-top: 4px; }
+}
+
 
