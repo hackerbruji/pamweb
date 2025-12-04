@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIGMA SL - Cervezas</title>
+
+  <style>
+    :root {
+      --azul-oscuro: #0a2d52;
+      --azul-medio: #164b7a;
+      --azul-claro: #e8f1fb;
+      --dorado: #c8a043;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--azul-claro);
+      color: var(--azul-oscuro);
+    }
+
+    header {
+      background: #ffffffee;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--azul-oscuro);
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80')
+                  center/cover no-repeat;
+      min-height: 55vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+      text-shadow: 0 2px 6px #000;
+    }
+
+    .hero h2 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    /* ---------------- ICONOS DE MARCAS ---------------- */
+    .iconos-marcas {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin: 60px auto;
+      flex-wrap: wrap;
+      max-width: 900px;
+    }
+
+    .icono-marca {
+      width: 150px;
+      height: 150px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .icono-marca:hover {
+      transform: scale(1.1);
+    }
+
+    .iconos-marcas p {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+ /* Dropdown nuevo */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: var(--azul-oscuro);
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-content a:hover {
+      background-color: var(--azul-claro);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+   <a href="index.html"><img src="https://le-de.cdn-website.com/c27de361b5e444dabef50b581aec7ea7/dms3rep/multi/opt/logowebproofing-506w.png" alt="Logo ANIGMA"></a>
+
+   <nav>
+      <a href="#empresa">Empresa</a>
+      <div class="dropdown">
+        <a href="#catalogo" class="dropbtn">Productos ▾</a>
+        <div class="dropdown-content">
+          <a href="#alimentacion">Alimentación</a>
+          <a href="cervezas.html">Cervezas</a>
+          <a href="#bodega">Bodega</a>
+          <a href="#limpieza">Limpieza</a>
+          <a href="#menaje">Menaje</a>
+        </div>
+      </div>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Nuestras Cervezas</h2>
+    <p>Distribuimos las marcas más reconocidas y valoradas del mercado.</p>
+  </section>
+
+  <!-- ICONOS DE MARCAS -->
+  <section class="iconos-marcas">
+
+    <div>
+     <a href="mahou.html"> <div class="icono-marca">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Mahou_Logo.svg" width="90">
+      </div>
+      <p>Mahou</p></a>
+    </div>
+
+    <div>
+      <div class="icono-marca">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/San_Miguel_logo.svg" width="90">
+      </div>
+      <p>San Miguel</p>
+    </div>
+
+    <div>
+      <div class="icono-marca">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Cervezas_Alhambra_logo.svg" width="90">
+      </div>
+      <p>Alhambra</p>
+    </div>
+
+  </section>
+
+</body>
+</html>

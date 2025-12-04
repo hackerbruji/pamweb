@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANIGMA SL - Albacete</title>
+  <style>
+    :root {
+      --azul-oscuro: #0a2d52;
+      --azul-medio: #164b7a;
+      --azul-claro: #e8f1fb;
+      --dorado: #c8a043;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--azul-claro);
+      color: var(--azul-oscuro);
+    }
+    header {
+      background: #ffffffee;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header img {
+      height: 70px;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--azul-oscuro);
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--dorado);
+    }
+    .hero {
+      background: url('https://www.distribucionanigma.es/wp-content/uploads/2020/02/anigma-slide-1.jpg') center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      color: white;
+      text-shadow: 0 2px 6px #000;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+    }
+    .iconos {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 70px auto;
+      flex-wrap: wrap;
+      max-width: 1100px;
+    }
+    .icono {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .icono:hover {
+      transform: scale(1.08);
+    }
+    .iconos p {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    @media(max-width: 700px){
+      .hero h2 {font-size: 2rem;}
+      .iconos {gap: 30px;}
+    }
+  
+    /* Dropdown nuevo */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: var(--azul-oscuro);
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-content a:hover {
+      background-color: var(--azul-claro);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="https://le-de.cdn-website.com/c27de361b5e444dabef50b581aec7ea7/dms3rep/multi/opt/logowebproofing-506w.png" alt="Logo ANIGMA"></a>
+    <nav>
+      <a href="#empresa">Empresa</a>
+      <div class="dropdown">
+        <a href="#catalogo" class="dropbtn">Productos ▾</a>
+        <div class="dropdown-content">
+          <a href="#alimentacion">Alimentación</a>
+          <a href="cervezas.html">Cervezas</a>
+          <a href="#bodega">Bodega</a>
+          <a href="#limpieza">Limpieza</a>
+          <a href="#menaje">Menaje</a>
+        </div>
+      </div>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Distribuciones ANIGMA SL - Albacete</h2>
+    <p>Especialistas en alimentación, bebidas, menaje y productos de limpieza.</p>
+
+    <div class="iconos">
+      <div>
+        <a href="cervezas.html"><div class="icono"><img src="https://cdn-icons-png.flaticon.com/512/2738/2738730.png" width="70"></div>
+        <p>Cervezas</p></a>
+      </div>
+      <div>
+        <div class="icono"><img src="https://cdn-icons-png.flaticon.com/512/3535/3535443.png" width="70"></div>
+        <p>Bodega</p>
+      </div>
+      <div>
+        <div class="icono"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046786.png" width="70"></div>
+        <p>Alimentación</p>
+      </div>
+      <div>
+        <div class="icono"><img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" width="70"></div>
+        <p>Limpieza</p>
+      </div>
+      <div>
+        <div class="icono"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" width="70"></div>
+        <p>Menaje</p>
+      </div>
+    </div>
+      
+      
+</body>
+</html>

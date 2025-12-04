@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIGMA SL - Cervezas Mahou</title>
+  <style>
+    :root {
+      --azul-oscuro: #0a2d52;
+      --azul-medio: #164b7a;
+      --azul-claro: #e8f1fb;
+      --dorado: #c8a043;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--azul-claro);
+      color: var(--azul-oscuro);
+    }
+    header {
+      background: #ffffffee;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header img {height: 70px;}
+    nav {display: flex; gap: 25px;}
+    nav a {
+      text-decoration: none;
+      color: var(--azul-oscuro);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {color: var(--dorado);}    
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1541558611936-3f7c2c9c4fd7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      min-height: 45vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 2px 6px black;
+    }
+    .hero h2 {font-size: 2.6rem; margin-bottom: 10px;}
+
+    /* DESTACADAS */
+    .destacadas {
+      max-width: 1100px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    .cerveza-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform .3s;
+    }
+    .cerveza-box:hover {transform: translateY(-6px);}    
+    .cerveza-box img {width: 120px; margin-bottom: 12px;}
+    .cerveza-box h3 {margin: 10px 0; color: var(--azul-medio);}    
+
+    /* DESCARGA CATÁLOGO */
+    .catalogo {
+      margin: 70px auto;
+      text-align: center;
+    }
+    .catalogo img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .catalogo a {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--azul-medio);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: .3s;
+    }
+    .catalogo a:hover {background: var(--azul-oscuro);}    
+	 /* Dropdown nuevo */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: var(--azul-oscuro);
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-content a:hover {
+      background-color: var(--azul-claro);
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="https://le-de.cdn-website.com/c27de361b5e444dabef50b581aec7ea7/dms3rep/multi/opt/logowebproofing-506w.png" alt="Logo ANIGMA"></a>
+    <nav>
+      <a href="#empresa">Empresa</a>
+      <div class="dropdown">
+        <a href="#catalogo" class="dropbtn">Productos ▾</a>
+        <div class="dropdown-content">
+          <a href="#alimentacion">Alimentación</a>
+          <a href="#cervezas">Cervezas</a>
+          <a href="#bodega">Bodega</a>
+          <a href="#limpieza">Limpieza</a>
+          <a href="#menaje">Menaje</a>
+        </div>
+      </div>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Cervezas Mahou</h2>
+    <p>Calidad, sabor y tradición en cada una de sus variedades.</p>
+  </section>
+
+  <!-- DESTACADAS -->
+  <section class="destacadas">
+    <div class="cerveza-box">
+      <img src="https://1000marcas.net/wp-content/uploads/2020/02/Mahou-Logo.png" />
+      <h3>Mahou Clásica</h3>
+      <p>La más tradicional. Suave, equilibrada y perfecta para cualquier ocasión.</p>
+    </div>
+
+    <div class="cerveza-box">
+      <img src="https://1000marcas.net/wp-content/uploads/2020/02/Mahou-Logo.png" />
+      <h3>Mahou 5 Estrellas</h3>
+      <p>Cerveza de cuerpo intenso, aroma afrutado y mayor carácter.</p>
+    </div>
+
+    <div class="cerveza-box">
+      <img src="https://1000marcas.net/wp-content/uploads/2020/02/Mahou-Logo.png" />
+      <h3>Mahou IPA</h3>
+      <p>Notas cítricas y lupuladas para quienes buscan un sabor más atrevido.</p>
+    </div>
+  </section>
+
+  <!-- DESCARGA CATÁLOGO -->
+  <section class="catalogo">
+    <img src="https://images.unsplash.com/photo-1532634896-26909d0d4b3a?auto=format&fit=crop&w=600&q=80" alt="Catálogo Mahou">
+    <br>
+    <a href="#">Descargar catálogo completo</a>
+  </section>
+
+</body>
+</html>
